@@ -24,6 +24,9 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".jsx", ".tsx"]
+    }],
     "react/react-in-jsx-scope": "off",
   },
 };
