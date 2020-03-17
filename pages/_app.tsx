@@ -1,12 +1,7 @@
 import App from 'next/app';
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-};
+import { createGlobalStyle } from 'styled-components';
+import { Provider } from '../components/Provider';
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -26,11 +21,11 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <ThemeProvider theme={theme}>
+      <Provider>
         <GlobalStyle />
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
-      </ThemeProvider>
+      </Provider>
     );
   }
 }

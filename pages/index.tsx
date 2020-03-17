@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
+import CounterMolecule from '../components/molecules/CounterMolecule';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -26,7 +27,7 @@ const Title = styled.h1`
   }
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   line-height: 1.5;
   font-size: 1.5rem;
   text-align: center;
@@ -115,68 +116,70 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Home = () => (
-  <Container>
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+export function Home() {
+  return (
+    <Container>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-    <StyledMain>
-      <Title>
-        Welcome to
-        {' '}
-        <StyledA href="https://nextjs.org">Next.js!</StyledA>
-      </Title>
+      <StyledMain>
+        <Title>
+          Welcome to
+          {' '}
+          <StyledA href="https://nextjs.org">Next.js!</StyledA>
+        </Title>
 
-      <Description>
-        Get started by editing
-        {' '}
-        <code>pages/index.jsx</code>
-      </Description>
+        <Description>
+          Get started by editing
+          {' '}
+          <code>pages/index.jsx</code>
+          <CounterMolecule />
+        </Description>
 
-      <Grid>
-        <Card href="https://nextjs.org/docs">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </Card>
+        <Grid>
+          <Card href="https://nextjs.org/docs">
+            <h3>Documentation &rarr;</h3>
+            <p>Find in-depth information about Next.js features and API.</p>
+          </Card>
 
-        <Card href="https://nextjs.org/learn">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </Card>
+          <Card href="https://nextjs.org/learn">
+            <h3>Learn &rarr;</h3>
+            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          </Card>
 
-        <Card
-          href="https://github.com/zeit/next.js/tree/master/examples"
+          <Card
+            href="https://github.com/zeit/next.js/tree/master/examples"
+          >
+            <h3>Examples &rarr;</h3>
+            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          </Card>
+
+          <Card
+            href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          >
+            <h3>Deploy &rarr;</h3>
+            <p>
+              Instantly deploy your Next.js site to a public URL with ZEIT Now.
+            </p>
+          </Card>
+        </Grid>
+      </StyledMain>
+
+      <StyledFooter>
+        <StyledA
+          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </Card>
-
-        <Card
-          href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
-          </p>
-        </Card>
-      </Grid>
-    </StyledMain>
-
-    <StyledFooter>
-      <StyledA
-        href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by
-        {' '}
-        <img src="/zeit.svg" alt="ZEIT Logo" />
-      </StyledA>
-    </StyledFooter>
-
-  </Container>
-);
+          Powered by
+          {' '}
+          <img src="/zeit.svg" alt="ZEIT Logo" />
+        </StyledA>
+      </StyledFooter>
+    </Container>
+  );
+}
 
 export default Home;
