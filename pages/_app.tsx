@@ -1,4 +1,5 @@
 import App from 'next/app';
+import Head from 'next/head';
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from '../components/Provider';
@@ -23,6 +24,11 @@ export default class MyApp extends App {
     return (
       <Provider>
         <GlobalStyle />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Head>
+          <title>Next App</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
       </Provider>

@@ -30,6 +30,7 @@ module.exports = {
       "ignoreRestSiblings": false,
     }],
     'import/extensions': 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.stories.tsx"]}],
     'import/no-unresolved': 0,
     'import/prefer-default-export': 0,
     'no-param-reassign': 0,
