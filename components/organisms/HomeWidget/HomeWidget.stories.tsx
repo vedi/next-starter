@@ -7,6 +7,6 @@ export default {
   component: HomeWidget,
 };
 
-export const Simple = () => (
-  <HomeWidget counter={1} onClickIncrease={action('onClickIncrease')} />
-);
+export function Simple() {
+  return <HomeWidget counter={1} onClickIncrease={action('onClickIncrease')} />;
+}

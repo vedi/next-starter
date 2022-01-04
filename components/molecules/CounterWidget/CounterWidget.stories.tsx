@@ -7,6 +7,6 @@ export default {
   component: CounterWidget,
 };
 
-export const Simple = () => (
-  <CounterWidget counter={1} onClickIncrease={action('onClickIncrease')} />
-);
+export function Simple() {
+  return <CounterWidget counter={1} onClickIncrease={action('onClickIncrease')} />;
+}

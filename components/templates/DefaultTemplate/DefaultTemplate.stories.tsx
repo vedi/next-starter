@@ -6,8 +6,10 @@ export default {
   component: DefaultTemplate,
 };
 
-export const Simple = () => (
-  <DefaultTemplate>
-    Content
-  </DefaultTemplate>
-);
+export function Simple() {
+  return (
+    <DefaultTemplate>
+      Content
+    </DefaultTemplate>
+  );
+}

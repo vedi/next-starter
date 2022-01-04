@@ -6,6 +6,6 @@ export default {
   component: Footer,
 };
 
-export const Simple = () => (
-  <Footer />
-);
+export function Simple() {
+  return <Footer />;
+}

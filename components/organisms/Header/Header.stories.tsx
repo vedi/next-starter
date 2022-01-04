@@ -6,6 +6,6 @@ export default {
   component: Header,
 };
 
-export const Simple = () => (
-  <Header />
-);
+export function Simple() {
+  return <Header />;
+}
