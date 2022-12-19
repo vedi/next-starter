@@ -6,4 +6,6 @@ export default {
   component: AppLink,
 };
 
-export const simple = () => <AppLink href="/">Test</AppLink>;
+export function Simple() {
+  return <AppLink href="/">Test</AppLink>;
+}

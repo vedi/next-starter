@@ -16,6 +16,8 @@ export function AppLink({
   ...rest
 }: AppLinkProps) {
   return (
+    // TODO: Settle
+    // @ts-ignore
     <NextLink
       href={href}
       as={as}
@@ -24,10 +26,7 @@ export function AppLink({
       shallow={shallow}
       passHref={passHref}
       prefetch={prefetch}
-    >
-      {/* href is passed by NextLink */}
-      {/* eslint-disable-next-line jsx-a11y/anchor-has-content,react/jsx-props-no-spreading */}
-      <a {... rest} />
-    </NextLink>
+      {/* eslint-disable-line react/jsx-props-no-spreading */ ... rest}
+    />
   );
 }

@@ -6,4 +6,6 @@ export default {
   component: HomePage,
 };
 
-export const connected = () => <HomePage />;
+export function Connected() {
+  return <HomePage />;
+}

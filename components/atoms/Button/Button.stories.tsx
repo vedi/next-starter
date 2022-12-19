@@ -6,4 +6,6 @@ export default {
   component: Button,
 };
 
-export const simple = () => <Button>Test</Button>;
+export function Simple() {
+  return <Button>Test</Button>;
+}

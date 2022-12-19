@@ -35,5 +35,6 @@ module.exports = {
       extensions: ['.jsx', '.tsx'],
     }],
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'warn', // TODO: settle this
   },
 };
