@@ -1,12 +1,12 @@
-import React from 'react';
-import { action } from '@storybook/addon-actions';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { HomeWidget } from './HomeWidget';
 
 export default {
-  title: 'HomeWidget',
   component: HomeWidget,
-};
+} as ComponentMeta<typeof HomeWidget>;
 
-export function Simple() {
-  return <HomeWidget counter={1} onClickIncrease={action('onClickIncrease')} />;
-}
+export const Default: ComponentStoryObj<typeof HomeWidget> = {
+  args: {
+    counter: 1,
+  },
+};

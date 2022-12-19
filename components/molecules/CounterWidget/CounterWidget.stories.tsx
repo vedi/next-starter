@@ -1,12 +1,13 @@
-import React from 'react';
-import { action } from '@storybook/addon-actions';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { CounterWidget } from './CounterWidget';
+import { Button } from '../../atoms/Button';
 
 export default {
-  title: 'CounterWidget',
   component: CounterWidget,
-};
+} as ComponentMeta<typeof CounterWidget>;
 
-export function Simple() {
-  return <CounterWidget counter={1} onClickIncrease={action('onClickIncrease')} />;
-}
+export const Default: ComponentStoryObj<typeof Button> = {
+  args: {
+    counter: 1,
+  },
+};

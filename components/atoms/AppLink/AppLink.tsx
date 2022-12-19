@@ -1,9 +1,11 @@
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
 
 export interface AppLinkProps
   extends NextLinkProps,
-    Omit<ComponentProps<'a'>, keyof NextLinkProps> {}
+    Omit<ComponentProps<'a'>, keyof NextLinkProps> {
+  children: React.ReactNode;
+}
 
 export function AppLink({
   href,

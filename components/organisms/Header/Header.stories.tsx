@@ -1,11 +1,9 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { Header } from './Header';
 
 export default {
-  title: 'Header',
   component: Header,
-};
+} as ComponentMeta<typeof Header>;
 
-export function Simple() {
-  return <Header />;
-}
+export const Default: ComponentStoryObj<typeof Header> = {
+};

@@ -1,11 +1,13 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { AppLink } from './AppLink';
 
 export default {
-  title: 'AppLink',
   component: AppLink,
-};
+} as ComponentMeta<typeof AppLink>;
 
-export function Simple() {
-  return <AppLink href="/">Test</AppLink>;
-}
+export const Default: ComponentStoryObj<typeof AppLink> = {
+  args: {
+    children: 'Link text',
+    href: 'http://',
+  },
+};

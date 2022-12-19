@@ -1,15 +1,12 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { DefaultTemplate } from './DefaultTemplate';
 
 export default {
-  title: 'DefaultTemplate',
   component: DefaultTemplate,
-};
+} as ComponentMeta<typeof DefaultTemplate>;
 
-export function Simple() {
-  return (
-    <DefaultTemplate>
-      Content
-    </DefaultTemplate>
-  );
-}
+export const Default: ComponentStoryObj<typeof DefaultTemplate> = {
+  args: {
+    children: 'Content',
+  },
+};

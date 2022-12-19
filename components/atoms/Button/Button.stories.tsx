@@ -1,11 +1,12 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { Button } from './Button';
 
 export default {
-  title: 'Button',
   component: Button,
-};
+} as ComponentMeta<typeof Button>;
 
-export function Simple() {
-  return <Button>Test</Button>;
-}
+export const Default: ComponentStoryObj<typeof Button> = {
+  args: {
+    children: 'Button body',
+  },
+};

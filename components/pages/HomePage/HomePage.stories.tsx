@@ -1,11 +1,9 @@
-import React from 'react';
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import HomePage from './HomePage';
 
 export default {
-  title: 'HomePage',
   component: HomePage,
-};
+} as ComponentMeta<typeof HomePage>;
 
-export function Connected() {
-  return <HomePage />;
-}
+export const Default: ComponentStoryObj<typeof HomePage> = {
+};
